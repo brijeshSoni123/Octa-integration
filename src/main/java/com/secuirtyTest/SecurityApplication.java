@@ -22,7 +22,7 @@ public class SecurityApplication {
         @Override
         protected void configure(HttpSecurity http) throws Exception {
             http.authorizeRequests()
-                    .antMatchers(HttpMethod.GET,"/okta-custom-login", "/templates/css/okta.css").permitAll()
+                    .antMatchers(HttpMethod.GET,"/okta-custom-login", "/static/css/okta.css").permitAll()
                     .anyRequest().authenticated()
                     .and().oauth2Client()
                     .and().oauth2Login();

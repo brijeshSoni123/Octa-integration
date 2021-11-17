@@ -47,7 +47,7 @@ public class LoginController {
         // the widget needs the base url, just grab the root of the issuer
         String orgUrl = new URL(new URL(issuer), "/").toString();
 
-        ModelAndView mav = new ModelAndView("templates/okta/login");
+        ModelAndView mav = new ModelAndView("okta/login");
         mav.addObject(STATE, state);
         mav.addObject(SCOPES, oktaOAuth2Properties.getScopes());
         mav.addObject(OKTA_BASE_URL, orgUrl);
