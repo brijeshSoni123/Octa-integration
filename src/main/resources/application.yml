@@ -1,0 +1,13 @@
+okta:
+  oauth2:
+    issuer: "https://dev-xxxxxxx.okta.com/oauth2/default"
+    client-id: "xxxxx"
+    client-secret: "xxxxxx"
+
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          okta:
+            authorization-uri: http://localhost:8080/okta-custom-login
